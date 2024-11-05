@@ -3,18 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Random No Button</title>
+    <title>Messi Fan Club</title>
     <link rel="stylesheet" href="style.css"/>
 </head>
 <body>
-    <div class="wrapper">
-        <h2 class="question">Is Lionel Messi the best in football?</h2>
-        <img class="gif" alt="gif" src="https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExdG43eHhzczFkZTBuOTdpMHFkOWh3MnRrZWY2NXNkdjk3ZXdtb254dSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/RGeqYyfLc1ipfU2fgS/giphy-downsized-large.gif" />
-        <div class="btn-group">
-            <button class="yes-btn">Yes</button>
-            <button class="no-btn">No</button>
+    <h1>Is Lionel Messi the best in football?</h1>
+    <div class="container">
+        <img src="https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExdG43eHhzczFkZTBuOTdpMHFkOWh3MnRrZWY2NXNkdjk3ZXdtb254dSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/RGeqYyfLc1ipfU2fgS/giphy-downsized-large.gif" alt="Messi" class="gif-image">
+        <div class="button-container">
+            <button class="btn" id="yes-btn" onclick="showWelcome()">Yes</button>
+            <button class="btn no-btn" id="no-btn" onmouseover="moveButton()">No</button>
         </div>
     </div>
+
+    <div id="welcome-message" style="display: none;">
+        <h2>Welcome to Messi fan club!</h2>
+        <img src="https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExZHgxcHF0ZWxlMTd6ZzViaTBjb25kZ2w0OWI3d2R4d2g1NW9iMWpwZiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/qp61kl8rdZwuQ/giphy.gif" alt="Welcome" class="gif-image">
+    </div>
+
     <script src="main.js"></script>
 </body>
 </html>
