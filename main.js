@@ -1,28 +1,16 @@
-const yesBtn = document.querySelector(".yes-btn");
-const noBtn = document.querySelector(".no-btn");
-const question = document.querySelector(".question");
-const gif = document.querySelector(".gif");
+function showWelcome() {
+  document.querySelector('.container').style.display = 'none';
+  document.getElementById('welcome-message').style.display = 'block';
+}
 
-// Change text and gif when the Yes button is clicked
-yesBtn.addEventListener("click", () => {
-  question.innerHTML = "Welcome to Messi fan club!";
-  gif.src = "https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExZHgxcHF0ZWxlMTd6ZzViaTBjb25kZ2w0OWI3d2R4d2g1NW9iMWpwZiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/qp61kl8rdZwuQ/giphy.gif";
-});
+function moveButton() {
+  const noBtn = document.getElementById('no-btn');
+  const viewportWidth = window.innerWidth;
+  const viewportHeight = window.innerHeight;
 
-// Make the No button move randomly on hover
-noBtn.addEventListener("mouseover", () => {
-  const wrapper = document.querySelector(".wrapper");
-  const wrapperRect = wrapper.getBoundingClientRect();
-  const noBtnRect = noBtn.getBoundingClientRect();
+  const newLeft = Math.floor(Math.random() * (viewportWidth - noBtn.offsetWidth));
+  const newTop = Math.floor(Math.random() * (viewportHeight - noBtn.offsetHeight));
 
-  // Calculate max positions to ensure the button stays within the wrapper
-  const maxX = wrapperRect.width - noBtnRect.width;
-  const maxY = wrapperRect.height - noBtnRect.height;
-
-  const randomX = Math.floor(Math.random() * maxX);
-  const randomY = Math.floor(Math.random() * maxY);
-
-  noBtn.style.position = "absolute"; // Set absolute position
-  noBtn.style.left = randomX + "px";
-  noBtn.style.top = randomY + "px";
-});
+  noBtn.style.left = `${newLeft}px`;
+  noBtn.style.top = `${newTop}px`;
+}
