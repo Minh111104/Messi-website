@@ -16,7 +16,9 @@ h1 {
 }
 .button-container {
     margin-top: 20px;
-    position: relative; /* Added for the moving button */
+    display: flex;
+    justify-content: center;
+    gap: 20px;
 }
 .btn {
     padding: 10px 20px;
@@ -35,5 +37,5 @@ h1 {
     color: white;
 }
 .no-btn {
-    position: absolute;
+    position: relative;
 }
