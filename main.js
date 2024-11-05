@@ -8,9 +8,12 @@ function moveButton() {
   const viewportWidth = window.innerWidth;
   const viewportHeight = window.innerHeight;
 
+  // Change No button's position to absolute when hovered for the first time
+  noBtn.style.position = 'absolute';
+
   // Calculate new positions ensuring they are within the viewport bounds
-  const newLeft = Math.floor(Math.random() * (viewportWidth - noBtn.offsetWidth - 20));
-  const newTop = Math.floor(Math.random() * (viewportHeight - noBtn.offsetHeight - 20));
+  const newLeft = Math.floor(Math.random() * (viewportWidth - noBtn.offsetWidth));
+  const newTop = Math.floor(Math.random() * (viewportHeight - noBtn.offsetHeight));
 
   noBtn.style.left = `${newLeft}px`;
   noBtn.style.top = `${newTop}px`;
