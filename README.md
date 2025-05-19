@@ -36,3 +36,6 @@ This project contains a single-page interactive website, asking users if Lionel 
 - **`style.css`**: The CSS file styles the page with colors, fonts, and button animations to create an engaging look and feel.
 - **`main.js`**: The JavaScript file handles the functionality for the button interactions. It controls the movement of the "No" button on hover, dynamically adjusts the size of the "Yes" button, and shows a welcome message when "Yes" is clicked.
 
+## License
+
+This project is licensed under the MIT License. See the `LICENSE` file for details.
