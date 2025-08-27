@@ -3,23 +3,98 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Messi Fan Club</title>
+    <title>Messi Fan Club - The Greatest of All Time</title>
+    <meta name="description" content="Join the ultimate Messi fan club and celebrate the football legend">
     <link rel="stylesheet" href="style.css"/>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
-    <h1>Is Lionel Messi the best in football?</h1>
-    <div class="container">
-        <img src="https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExdG43eHhzczFkZTBuOTdpMHFkOWh3MnRrZWY2NXNkdjk3ZXdtb254dSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/RGeqYyfLc1ipfU2fgS/giphy-downsized-large.gif" alt="Messi" class="gif-image">
-        <div class="button-container">
-            <button class="btn" id="yes-btn" onclick="showWelcome()">Yes</button>
-            <button class="btn no-btn" id="no-btn" onmouseover="moveButton()">No</button>
-        </div>
-    </div>
+    <header class="header">
+        <nav class="nav">
+            <div class="nav-brand">
+                <i class="fas fa-futbol"></i>
+                <span>Messi Fan Club</span>
+            </div>
+        </nav>
+    </header>
 
-    <div id="welcome-message" style="display: none;">
-        <h2>Welcome to Messi fan club!</h2>
-        <img src="https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExZHgxcHF0ZWxlMTd6ZzViaTBjb25kZ2w0OWI3d2R4d2g1NW9iMWpwZiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/qp61kl8rdZwuQ/giphy.gif" alt="Welcome" class="gif-image">
-    </div>
+    <main class="main-content">
+        <section class="hero-section">
+            <div class="hero-content">
+                <h1 class="hero-title">
+                    <span class="highlight">Lionel Messi</span>
+                    <span class="subtitle">The Greatest of All Time</span>
+                </h1>
+                <p class="hero-description">
+                    Join millions of fans worldwide in celebrating the football legend who redefined the beautiful game
+                </p>
+            </div>
+        </section>
+
+        <section class="question-section">
+            <div class="container">
+                <div class="question-card">
+                    <h2 class="question-title">Is Lionel Messi the best in football?</h2>
+                    <div class="messi-gif">
+                        <img src="https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExdG43eHhzczFkZTBuOTdpMHFkOWh3MnRrZWY2NXNkdjk3ZXdtb254dSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/RGeqYyfLc1ipfU2fgS/giphy-downsized-large.gif" 
+                             alt="Messi celebrating a goal" 
+                             class="gif-image">
+                    </div>
+                    <div class="button-container">
+                        <button class="btn btn-primary" id="yes-btn" onclick="showWelcome()" aria-label="Yes, Messi is the best">
+                            <i class="fas fa-thumbs-up"></i>
+                            <span>Yes, Absolutely!</span>
+                        </button>
+                        <button class="btn btn-secondary no-btn" id="no-btn" onmouseover="moveButton()" aria-label="No, Messi is not the best">
+                            <i class="fas fa-thumbs-down"></i>
+                            <span>No</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="welcome-message" class="welcome-section" style="display: none;">
+            <div class="welcome-content">
+                <h2 class="welcome-title">
+                    <i class="fas fa-star"></i>
+                    Welcome to the Messi Fan Club!
+                    <i class="fas fa-star"></i>
+                </h2>
+                <div class="welcome-gif">
+                    <img src="https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExZHgxcHF0ZWxlMTd6ZzViaTBjb25kZ2w0OWI3d2R4d2g1NW9iMWpwZiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/qp61kl8rdZwuQ/giphy.gif" 
+                         alt="Messi celebrating" 
+                         class="gif-image">
+                </div>
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <i class="fas fa-trophy"></i>
+                        <h3>8x Ballon d'Or</h3>
+                        <p>Most prestigious individual award</p>
+                    </div>
+                    <div class="stat-card">
+                        <i class="fas fa-futbol"></i>
+                        <h3>800+ Goals</h3>
+                        <p>Professional career goals</p>
+                    </div>
+                    <div class="stat-card">
+                        <i class="fas fa-medal"></i>
+                        <h3>World Cup Winner</h3>
+                        <p>2022 FIFA World Cup champion</p>
+                    </div>
+                </div>
+                <button class="btn btn-primary" onclick="resetPage()">
+                    <i class="fas fa-redo"></i>
+                    <span>Start Over</span>
+                </button>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2024 Messi Fan Club. Made with <i class="fas fa-heart"></i> for football fans worldwide.</p>
+    </footer>
 
     <script src="main.js"></script>
 </body>
