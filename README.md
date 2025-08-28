@@ -174,10 +174,8 @@ Feel free to contribute to this project by:
 
 ## 📄 License
 
-This project is open source and available under the MIT License.
+This project is created for educational purpose.
 
 ---
 
 **Made with ❤️ for Messi fans worldwide!** ⚽🏆
-
-*"Talent without hard work is nothing." - Lionel Messi*
