@@ -19,7 +19,7 @@ A modern, interactive website celebrating the football legend Lionel Messi with 
 - Growing "Yes" button that gets bigger each time
 - Confetti effects on page load
 
-### 🎭 **Advanced Animations**
+### **Advanced Animations**
 
 - Fade-in animations for page elements
 - Smooth transitions between sections
@@ -34,7 +34,7 @@ A modern, interactive website celebrating the football legend Lionel Messi with 
 - Swipe gestures for mobile users
 - Responsive grid layouts
 
-### ♿ **Accessibility Features**
+### **Accessibility Features**
 
 - Semantic HTML structure
 - ARIA labels for screen readers
