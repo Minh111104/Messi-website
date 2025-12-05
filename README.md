@@ -160,7 +160,6 @@ Messi-website/
 - [ ] Social media integration
 - [ ] User-generated content
 - [ ] Dark/Light theme toggle
-- [ ] Progressive Web App (PWA) features
 
 ## 🤝 Contributing
 
