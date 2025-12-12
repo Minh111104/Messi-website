@@ -1,4 +1,4 @@
-# Messi Fan Club Website 🏆⚽
+# Messi Fan Club Website 🐐⚽
 
 A modern, interactive website celebrating the football legend Lionel Messi with enhanced user experience and beautiful animations.
 
