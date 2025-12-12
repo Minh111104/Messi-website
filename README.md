@@ -157,7 +157,6 @@ Messi-website/
 
 - [ ] Audio effects for celebrations
 - [ ] More Messi statistics and achievements
-- [ ] Social media integration
 - [ ] User-generated content
 - [ ] Dark/Light theme toggle
 
