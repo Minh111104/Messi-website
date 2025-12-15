@@ -1,13 +1,48 @@
 // Enhanced Messi Fan Club JavaScript
 
-// Initialize the page with smooth animations
+// Check for saved theme preference or default to 'light'
 document.addEventListener('DOMContentLoaded', function() {
+    // Load saved theme
+    const savedTheme = localStorage.getItem('theme') || 'light';
+    if (savedTheme === 'dark') {
+        document.body.classList.add('dark-theme');
+        updateThemeIcon('dark');
+    }
+    
     // Add entrance animations
     animateElements();
     
     // Add confetti effect to the page
     addConfettiEffect();
 });
+
+// Toggle between light and dark theme
+function toggleTheme() {
+    const body = document.body;
+    const themeIcon = document.getElementById('theme-icon');
+    
+    body.classList.toggle('dark-theme');
+    
+    if (body.classList.contains('dark-theme')) {
+        updateThemeIcon('dark');
+        localStorage.setItem('theme', 'dark');
+    } else {
+        updateThemeIcon('light');
+        localStorage.setItem('theme', 'light');
+    }
+}
+
+// Update theme icon
+function updateThemeIcon(theme) {
+    const themeIcon = document.getElementById('theme-icon');
+    if (theme === 'dark') {
+        themeIcon.classList.remove('fa-moon');
+        themeIcon.classList.add('fa-sun');
+    } else {
+        themeIcon.classList.remove('fa-sun');
+        themeIcon.classList.add('fa-moon');
+    }
+}
 
 // Show welcome message with enhanced animations
 function showWelcome() {
