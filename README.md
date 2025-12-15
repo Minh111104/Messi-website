@@ -155,7 +155,6 @@ Messi-website/
 
 ## 🎉 Future Enhancements
 
-- [ ] Audio effects for celebrations
 - [ ] More Messi statistics and achievements
 - [ ] Dark/Light theme toggle
 
