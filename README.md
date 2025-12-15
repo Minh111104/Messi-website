@@ -155,8 +155,8 @@ Messi-website/
 
 ## 🎉 Future Enhancements
 
-- [ ] More Messi statistics and achievements
-- [ ] Dark/Light theme toggle
+- [x] More Messi statistics and achievements
+- [x] Dark/Light theme toggle
 
 ## 🤝 Contributing
 
