@@ -76,16 +76,18 @@ function showWelcome() {
     }, 300);
 }
 
-// Enhanced button movement with better physics
+// Enhanced button movement with continuous floating
+let floatingInterval = null;
+
 function moveButton() {
     const noBtn = document.getElementById('no-btn');
     const viewportWidth = window.innerWidth;
     const viewportHeight = window.innerHeight;
     
     // Add shake animation first
-    noBtn.style.animation = 'shake 0.5s ease-in-out';
+    noBtn.style.animation = 'shake 0.5s ease-in-out, float 1.5s ease-in-out infinite';
     
-    // Change position to absolute for movement
+    // Change position to fixed for movement
     noBtn.style.position = 'fixed';
     
     // Calculate new positions with boundary checking
@@ -97,21 +99,21 @@ function moveButton() {
     const maxAttempts = 10;
     
     do {
-        newLeft = Math.floor(Math.random() * (viewportWidth - buttonWidth));
-        newTop = Math.floor(Math.random() * (viewportHeight - buttonHeight));
+        newLeft = Math.floor(Math.random() * (viewportWidth - buttonWidth - 20)) + 10;
+        newTop = Math.floor(Math.random() * (viewportHeight - buttonHeight - 20)) + 10;
         attempts++;
     } while (
         attempts < maxAttempts && 
-        (Math.abs(newLeft - parseInt(noBtn.style.left || 0)) < 100 || 
-         Math.abs(newTop - parseInt(noBtn.style.top || 0)) < 100)
+        (Math.abs(newLeft - parseInt(noBtn.style.left || 0)) < 150 || 
+         Math.abs(newTop - parseInt(noBtn.style.top || 0)) < 150)
     );
     
     // Ensure button stays within viewport
-    newLeft = Math.max(0, Math.min(newLeft, viewportWidth - buttonWidth));
-    newTop = Math.max(0, Math.min(newTop, viewportHeight - buttonHeight));
+    newLeft = Math.max(10, Math.min(newLeft, viewportWidth - buttonWidth - 10));
+    newTop = Math.max(10, Math.min(newTop, viewportHeight - buttonHeight - 10));
     
     // Smooth movement animation
-    noBtn.style.transition = 'all 0.3s ease';
+    noBtn.style.transition = 'all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55)';
     noBtn.style.left = `${newLeft}px`;
     noBtn.style.top = `${newTop}px`;
     
@@ -126,9 +128,31 @@ function moveButton() {
     setTimeout(() => {
         yesBtn.style.transform = 'scale(1)';
     }, 300);
+}
+
+// Continuous floating when hovering over No button
+function startFloating() {
+    const noBtn = document.getElementById('no-btn');
     
-    // Add floating effect to No button
-    noBtn.style.animation = 'float 2s ease-in-out infinite';
+    // Clear any existing interval
+    if (floatingInterval) {
+        clearInterval(floatingInterval);
+    }
+    
+    // Move button immediately
+    moveButton();
+    
+    // Continue moving while hovering
+    floatingInterval = setInterval(() => {
+        moveButton();
+    }, 800);
+}
+
+function stopFloating() {
+    if (floatingInterval) {
+        clearInterval(floatingInterval);
+        floatingInterval = null;
+    }
 }
 
 // Animate stat cards entrance
