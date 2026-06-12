@@ -172,5 +172,4 @@ Feel free to contribute to this project by:
 
 This project is created for educational purpose.
 
-
 **Made with ❤️ for Messi fans worldwide!** ⚽🏆
